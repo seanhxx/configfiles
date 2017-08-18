@@ -22,6 +22,6 @@ done
 # Create symbolic link
 for FILE in "${FILES[@]}"; do
 echo "Create symbolic link for $FILE"
-ln -sf $DIR/$FILE ~/.$FILE
+ln -sf $DIR/.$FILE ~/.$FILE
 echo "...done"
 done
