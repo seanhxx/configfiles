@@ -3,3 +3,5 @@
 	email = seanhxx42@live.com
 [credential]
 	helper = cache --timeout=7200
+[core]
+	excludesfile = /home/seanhxx/.gitignore_global
