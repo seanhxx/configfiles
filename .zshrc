@@ -94,3 +94,5 @@ alias rc-arm-gdb="/home/seanhxx/opt/gcc-arm-none-eabi-6-2017-q2-update/bin/arm-n
 alias rc-arm-as="/home/seanhxx/opt/gcc-arm-none-eabi-6-2017-q2-update/bin/arm-none-eabi-as"
 alias rc-arm-ld="/home/seanhxx/opt/gcc-arm-none-eabi-6-2017-q2-update/bin/arm-none-eabi-ld"
 alias autoflake="/home/seanhxx/.local/bin/autoflake"
+alias pycharm="/home/seanhxx/opt/pycharm-community-2017.2.2/bin/pycharm.sh"
+alias arduino="/home/seanhxx/opt/arduino-1.8.4-linux64/arduino-1.8.4/arduino"
