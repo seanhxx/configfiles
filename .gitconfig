@@ -5,3 +5,5 @@
 	helper = cache --timeout=7200
 [core]
 	excludesfile = /home/seanhxx/.gitignore_global
+[push]
+	default = simple
