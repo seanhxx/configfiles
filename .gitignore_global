@@ -2,10 +2,20 @@
 ############
 .idea
 
-# Code #
+# Lisp Code #
 ############
 *.fasl
 
 # Image #
 ############
 *.png
+
+# Deep Learning Model#
+#################
+*.pb
+
+# Compressed File #
+###################
+*.tar.gz
+*.zip
+*.rar
