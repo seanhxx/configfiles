@@ -4,7 +4,7 @@
 # Path to your oh-my-zsh installation.
   export ZSH=~/.oh-my-zsh
 
-$my_dir=/home/seanhxx/tensorflow/models/research/
+export my_dir=/home/seanhxx/tensorflow/models/research/
 if [ -d $my_dir/slim ]; then
     export PYTHONPATH=$PYTHONPATH:$my_dir:$my_dir/slim
 fi
