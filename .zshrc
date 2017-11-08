@@ -10,7 +10,18 @@ if [ -d $my_dir/slim ]; then
 fi
 
 # Add Libraries to PYTHONPATH
-export PATH=/home/seanhxx/.local/bin:$PATH
+export LOCAL_HOME=~/.local
+export PATH=$LOCAL_BIN/bin:$PATH
+
+# Add Spark Home
+export SPARK_HOME=/opt/spark
+export PATH=$SPARK_HOME/bin:$PATH
+
+# Set Python version to py3 and ipy3
+export PYSPARK_PYTHON=/usr/bin/python3
+export PYSPARK_DRIVER_PYTHON=/usr/bin/python3
+
+
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
