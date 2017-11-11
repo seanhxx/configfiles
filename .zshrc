@@ -115,4 +115,4 @@ alias rc-arm-ld="/home/seanhxx/opt/gcc-arm-none-eabi-6-2017-q2-update/bin/arm-no
 alias autoflake="/home/seanhxx/.local/bin/autoflake"
 alias pycharm="/home/seanhxx/opt/pycharm-community-2017.2.2/bin/pycharm.sh"
 alias arduino="/home/seanhxx/opt/arduino-1.8.4-linux64/arduino-1.8.4/arduino"
-alias runtb="python3 /home/seanhxx/.local/lib/python3.5/site-packages/tensorboard/main.py"
+alias tensorboard="python3 /home/seanhxx/.local/lib/python3.5/site-packages/tensorboard/main.py"

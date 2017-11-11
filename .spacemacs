@@ -373,6 +373,8 @@ you should place your code here."
                ("\\paragraph{%s}" . "\\paragraph*{%s}")
                ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
 (require 'helm-bookmark)
+
+(setq org-image-actual-width nil)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
