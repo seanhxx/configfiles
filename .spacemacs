@@ -375,6 +375,7 @@ you should place your code here."
 (require 'helm-bookmark)
 
 (setq org-image-actual-width nil)
+(setq tramp-default-method "ssh")
 )
 
 ;; Do not write anything past this comment. This is where Emacs will

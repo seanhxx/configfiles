@@ -4,11 +4,6 @@
 # Path to your oh-my-zsh installation.
   export ZSH=~/.oh-my-zsh
 
-export my_dir=/home/seanhxx/tensorflow/models/research/
-if [ -d $my_dir/slim ]; then
-    export PYTHONPATH=$PYTHONPATH:$my_dir:$my_dir/slim
-fi
-
 # Add Libraries to PYTHONPATH
 export LOCAL_HOME=~/.local
 export PATH=$LOCAL_BIN/bin:$PATH
@@ -21,6 +16,13 @@ export PATH=$SPARK_HOME/bin:$PATH
 export PYSPARK_PYTHON=/usr/bin/python3
 export PYSPARK_DRIVER_PYTHON=/usr/bin/python3
 
+# Use Clang3.8
+export HOST_COMPILER=clang++-3.8
+
+# Add cuda toolkit path
+export PATH=/usr/local/cuda/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+export CUDA_HOME=/usr/local/cuda
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -113,6 +115,6 @@ alias rc-arm-gdb="/home/seanhxx/opt/gcc-arm-none-eabi-6-2017-q2-update/bin/arm-n
 alias rc-arm-as="/home/seanhxx/opt/gcc-arm-none-eabi-6-2017-q2-update/bin/arm-none-eabi-as"
 alias rc-arm-ld="/home/seanhxx/opt/gcc-arm-none-eabi-6-2017-q2-update/bin/arm-none-eabi-ld"
 alias autoflake="/home/seanhxx/.local/bin/autoflake"
-alias pycharm="/home/seanhxx/opt/pycharm-community-2017.2.2/bin/pycharm.sh"
+alias pycharm="/home/seanhxx/opt/pycharm-community-*/bin/pycharm.sh"
 alias arduino="/home/seanhxx/opt/arduino-1.8.4-linux64/arduino-1.8.4/arduino"
 alias tensorboard="python3 /home/seanhxx/.local/lib/python3.5/site-packages/tensorboard/main.py"
