@@ -2,15 +2,21 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=~/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
-# Add Libraries to PYTHONPATH
+# Add local bin
 export LOCAL_HOME=~/.local
-export PATH=$LOCAL_BIN/bin:$PATH
+export LOCAL_BIN=$LOCAL_HOME/bin
+if [[ ! $PATH =~ $LOCAL_BIN ]]; then
+    export PATH=$LOCAL_BIN:$PATH
+fi
 
 # Add Spark Home
 export SPARK_HOME=/opt/spark
-export PATH=$SPARK_HOME/bin:$PATH
+export SPARK_BIN=$SPARK_HOME/bin
+if [[ ! $PATH =~ $SPARK_BIN ]]; then
+    export PATH=$SPARK_BIN:$PATH
+fi
 
 # Set Python version to py3 and ipy3
 export PYSPARK_PYTHON=/usr/bin/python3
@@ -20,9 +26,16 @@ export PYSPARK_DRIVER_PYTHON=/usr/bin/python3
 export HOST_COMPILER=clang++-3.8
 
 # Add cuda toolkit path
-export PATH=/usr/local/cuda/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 export CUDA_HOME=/usr/local/cuda
+export CUDA_BIN=$CUDA_HOME/bin
+if [[ ! $PATH =~ $CUDA_BIN ]]; then
+    export PATH=$CUDA_BIN:$PATH
+fi
+
+export LD_LIBRARY=/usr/local/cuda/lib64
+if [[ ! $LD_LIBRARY_PATH =~ $LD_LIBRARY ]]; then
+    export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+fi
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
