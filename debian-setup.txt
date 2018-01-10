@@ -1,0 +1,8 @@
+1. adduser hduser sudo 
+https://askubuntu.com/questions/168280/how-do-i-grant-sudo-privileges-to-an-existing-user
+
+2. gnome chrome extension setup
+
+3. install zsh, oh-my-zsh, tmux
+
+
