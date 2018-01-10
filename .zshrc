@@ -7,14 +7,14 @@ export ZSH=~/.oh-my-zsh
 # Add local bin
 export LOCAL_HOME=~/.local
 export LOCAL_BIN=$LOCAL_HOME/bin
-if [[ ! $PATH =~ $LOCAL_BIN ]]; then
+if [[ -d $LOCAL_BIN && ! $PATH =~ $LOCAL_BIN ]]; then
     export PATH=$LOCAL_BIN:$PATH
 fi
 
 # Add Spark Home
 export SPARK_HOME=/opt/spark
 export SPARK_BIN=$SPARK_HOME/bin
-if [[ ! $PATH =~ $SPARK_BIN ]]; then
+if [[ -d $SPARK_BIN && ! $PATH =~ $SPARK_BIN ]]; then
     export PATH=$SPARK_BIN:$PATH
 fi
 
