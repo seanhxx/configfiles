@@ -10,3 +10,4 @@
 [core]
 	excludesfile = C:\\Users\\seanh\\.gitignore_global
 	autocrlf = true
+	safecrlf = true
