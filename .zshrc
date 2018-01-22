@@ -28,12 +28,12 @@ export HOST_COMPILER=clang++-3.8
 # Add cuda toolkit path
 export CUDA_HOME=/usr/local/cuda
 export CUDA_BIN=$CUDA_HOME/bin
-if [[ ! $PATH =~ $CUDA_BIN ]]; then
+if [[ -d $CUDA_BIN && ! $PATH =~ $CUDA_BIN ]]; then
     export PATH=$CUDA_BIN:$PATH
 fi
 
 export LD_LIBRARY=/usr/local/cuda/lib64
-if [[ ! $LD_LIBRARY_PATH =~ $LD_LIBRARY ]]; then
+if [[ -d $LD_LIBRARY && ! $LD_LIBRARY_PATH =~ $LD_LIBRARY ]]; then
     export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 fi
 
@@ -121,13 +121,3 @@ alias tks="tmux kill-session -t base"
 alias tas="tmux attach -t base"
 alias killbg="kill ${${(v)jobstates##*:*:}%=*}"
 alias vim="nvim"
-alias rc-arm="/home/seanhxx/opt/gcc-arm-none-eabi-6-2017-q2-update/bin/arm-none-eabi-gcc"
-alias matlab2016="/usr/local/matlab/bin/matlab"
-alias matlab2017="/usr/local/matlab2017a/bin/matlab"
-alias rc-arm-gdb="/home/seanhxx/opt/gcc-arm-none-eabi-6-2017-q2-update/bin/arm-none-eabi-gdb"
-alias rc-arm-as="/home/seanhxx/opt/gcc-arm-none-eabi-6-2017-q2-update/bin/arm-none-eabi-as"
-alias rc-arm-ld="/home/seanhxx/opt/gcc-arm-none-eabi-6-2017-q2-update/bin/arm-none-eabi-ld"
-alias autoflake="/home/seanhxx/.local/bin/autoflake"
-alias pycharm="/home/seanhxx/opt/pycharm-community-*/bin/pycharm.sh"
-alias arduino="/home/seanhxx/opt/arduino-1.8.4-linux64/arduino-1.8.4/arduino"
-alias tensorboard="python3 /home/seanhxx/.local/lib/python3.5/site-packages/tensorboard/main.py"
