@@ -6,6 +6,5 @@
 [core]
 	excludesfile = /home/seanhxx/.gitignore_global
 	autocrlf = input
-	safecrlf = true
 [push]
 	default = simple
