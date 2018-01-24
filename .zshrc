@@ -11,6 +11,12 @@ if [[ -d $LOCAL_BIN && ! $PATH =~ $LOCAL_BIN ]]; then
     export PATH=$LOCAL_BIN:$PATH
 fi
 
+# Add Anaconda3 bin
+export ANACONDA_BIN=~/anaconda3/bin
+if [[ -d $ANACONDA_BIN && ! $PATH =~ $ANACONDA_BIN ]]; then
+    export PATH=$ANACONDA_BIN:$PATH
+fi
+
 # Add Spark Home
 export SPARK_HOME=/opt/spark
 export SPARK_BIN=$SPARK_HOME/bin
