@@ -12,10 +12,10 @@ if [[ -d $LOCAL_BIN && ! $PATH =~ $LOCAL_BIN ]]; then
 fi
 
 # Add Anaconda3 bin
-export ANACONDA_BIN=~/anaconda3/bin
-if [[ -d $ANACONDA_BIN && ! $PATH =~ $ANACONDA_BIN ]]; then
-    export PATH=$ANACONDA_BIN:$PATH
-fi
+# export ANACONDA_BIN=~/anaconda3/bin
+# if [[ -d $ANACONDA_BIN && ! $PATH =~ $ANACONDA_BIN ]]; then
+#     export PATH=$ANACONDA_BIN:$PATH
+# fi
 
 # Add Spark Home
 export SPARK_HOME=/opt/spark
@@ -127,3 +127,4 @@ alias tks="tmux kill-session -t base"
 alias tas="tmux attach -t base"
 alias killbg="kill ${${(v)jobstates##*:*:}%=*}"
 alias vim="nvim"
+alias conda-python3="~/anaconda3/bin/python3"
