@@ -11,6 +11,13 @@ if [[ -d $LOCAL_BIN && ! $PATH =~ $LOCAL_BIN ]]; then
     export PATH=$LOCAL_BIN:$PATH
 fi
 
+# Add pypy3 bin
+export PYPY3_HOME=(~/pypy3*)
+export PYPY3_BIN=$PYPY3_HOME/bin
+if [[ -d $PYPY3_BIN && ! $PATH =~ $PYPY3_BIN ]]; then
+    export PATH=$PYPY3_BIN:$PATH
+fi
+
 # Add Anaconda3 bin
 # export ANACONDA_BIN=~/anaconda3/bin
 # if [[ -d $ANACONDA_BIN && ! $PATH =~ $ANACONDA_BIN ]]; then
@@ -127,4 +134,6 @@ alias tks="tmux kill-session -t base"
 alias tas="tmux attach -t base"
 alias killbg="kill ${${(v)jobstates##*:*:}%=*}"
 alias vim="nvim"
+alias conda-python2="~/anaconda3/envs/py27/bin/python"
 alias conda-python3="~/anaconda3/bin/python3"
+alias conda="~/anaconda3/bin/conda"
