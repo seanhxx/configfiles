@@ -1,3 +1,7 @@
+Partition Scheme:
+1. EFI: 550 Mb
+
+
 1. adduser hduser sudo 
 https://askubuntu.com/questions/168280/how-do-i-grant-sudo-privileges-to-an-existing-user
 
