@@ -18,7 +18,7 @@ Pin-Priority: 50
 
 apt-get update
 
-2. Upgrade linux-image-amd64 to 4.16 from stretch-backports
+2. Upgrade linux-image-amd64 to 4.16 from stretch-backports (for new hardware driver support)
 apt install -t stretch-backports linux-image-amd64
 
 3. blacklist nouveau driver to avoid bugs
