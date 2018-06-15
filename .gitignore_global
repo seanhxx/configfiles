@@ -15,13 +15,13 @@
 
 # Deep Learning Model#
 #################
-*.pb
+# *.pb
 
 # Compressed File #
 ###################
-*.tar.gz
-*.zip
-*.rar
+# *.tar.gz
+# *.zip
+# *.rar
 
 # Directory #
 #############
