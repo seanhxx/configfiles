@@ -1,0 +1,46 @@
+UPDATE 1: Install nvidia-driver, bumblebee together from testing source! (not sure about linux-image-amd64 and linux-headers) 
+
+
+Base system: Debian 9 Stretch (clean install)
+1. Settup stretch-backports and testing source 
+basically follow this link: https://serverfault.com/questions/22414/how-can-i-run-debian-stable-but-install-some-packages-from-testing
+
+stretch-backports.list:
+deb http:***/debian/ stretch-backports main contrib non-free
+(default priority 100)
+
+testing.list:
+deb http:***/debian/ testing main contrib non-free
+deb-src http:***/debian/ testing main contrib non-free
+
+testing.pref:
+Package: *
+Pin: release a=testing
+Pin-Priority: 50
+(set testing priority to 50)
+
+apt-get update
+
+2. Upgrade linux-image-amd64 to 4.16 from stretch-backports (for new hardware driver support)
+apt install -t stretch-backports linux-image-amd64
+
+3. blacklist nouveau driver to avoid bugs
+echo 'blacklist nouveau' >>/etc/modprobe.d/nouveau-blacklist.conf
+
+4. reboot system 
+
+5. Install nvidia driver from stretch-backports(390.48)
+https://wiki.debian.org/NvidiaGraphicsDrivers#Version_390.48_.28via_stretch-backports.29
+
+apt-get install -t stretch-backports linux-headers-$(uname -r|sed 's/[^-]*-[^-]*-//')
+apt-get install -t stretch-backports nvidia-driver
+
+6. Install bumblebee from testing source (may avoid bugs, never tested)
+basically follow this link: https://www.pcsuggest.com/install-and-configure-nvidia-optimus-with-bumblebee-in-debian/
+
+apt-get install bbswitch-dkms
+modprobe bbswitch load_state=0
+
+apt-get install vdpau-va-driver mesa-utils
+
+apt-get install -t testing bumblebee-nvidia

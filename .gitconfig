@@ -5,9 +5,6 @@
 	helper = cache --timeout=7200
 [core]
 	excludesfile = /home/seanhxx/.gitignore_global
-	autocrlf = input
-[push]
-	default = simple
 [alias]
 	co = checkout
 	ci = commit

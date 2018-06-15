@@ -1,7 +1,16 @@
-1. adduser hduser sudo 
+Partition Scheme:
+EFI: 550 Mb
+
+
+1. adduser user sudo 
 https://askubuntu.com/questions/168280/how-do-i-grant-sudo-privileges-to-an-existing-user
+2. change grub sequence
+http://tipsonubuntu.com/2016/07/20/grub2-boot-order-ubuntu-16-04/
 
 2. gnome chrome extension setup
+https://unix.stackexchange.com/questions/353962/debian-jessie-unable-to-install-gnome-extension-the-native-host-connector-is-no
+
+install drop down terminal
 
 3. install zsh, oh-my-zsh, tmux
 
