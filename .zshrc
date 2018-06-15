@@ -12,11 +12,11 @@ if [[ -d $LOCAL_BIN && ! $PATH =~ $LOCAL_BIN ]]; then
 fi
 
 # Add pypy3 bin
-export PYPY3_HOME=(~/pypy3*)
-export PYPY3_BIN=$PYPY3_HOME/bin
-if [[ -d $PYPY3_BIN && ! $PATH =~ $PYPY3_BIN ]]; then
-    export PATH=$PYPY3_BIN:$PATH
-fi
+# export PYPY3_HOME=(~/pypy3*)
+# export PYPY3_BIN=$PYPY3_HOME/bin
+# if [[ -d $PYPY3_BIN && ! $PATH =~ $PYPY3_BIN ]]; then
+#     export PATH=$PYPY3_BIN:$PATH
+# fi
 
 # Add Anaconda3 bin
 # export ANACONDA_BIN=~/anaconda3/bin
@@ -25,30 +25,30 @@ fi
 # fi
 
 # Add Spark Home
-export SPARK_HOME=/opt/spark
-export SPARK_BIN=$SPARK_HOME/bin
-if [[ -d $SPARK_BIN && ! $PATH =~ $SPARK_BIN ]]; then
-    export PATH=$SPARK_BIN:$PATH
-fi
+# export SPARK_HOME=/opt/spark
+# export SPARK_BIN=$SPARK_HOME/bin
+# if [[ -d $SPARK_BIN && ! $PATH =~ $SPARK_BIN ]]; then
+#     export PATH=$SPARK_BIN:$PATH
+# fi
 
 # Set Python version to py3 and ipy3
-export PYSPARK_PYTHON=/usr/bin/python3
-export PYSPARK_DRIVER_PYTHON=/usr/bin/python3
+# export PYSPARK_PYTHON=/usr/bin/python3
+# export PYSPARK_DRIVER_PYTHON=/usr/bin/python3
 
 # Use Clang3.8
-export HOST_COMPILER=clang++-3.8
+# export HOST_COMPILER=clang++-3.8
 
 # Add cuda toolkit path
-export CUDA_HOME=/usr/local/cuda
-export CUDA_BIN=$CUDA_HOME/bin
-if [[ -d $CUDA_BIN && ! $PATH =~ $CUDA_BIN ]]; then
-    export PATH=$CUDA_BIN:$PATH
-fi
-
-export LD_LIBRARY=/usr/local/cuda/lib64
-if [[ -d $LD_LIBRARY && ! $LD_LIBRARY_PATH =~ $LD_LIBRARY ]]; then
-    export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
-fi
+# export CUDA_HOME=/usr/local/cuda
+# export CUDA_BIN=$CUDA_HOME/bin
+# if [[ -d $CUDA_BIN && ! $PATH =~ $CUDA_BIN ]]; then
+#     export PATH=$CUDA_BIN:$PATH
+# fi
+# 
+# export LD_LIBRARY=/usr/local/cuda/lib64
+# if [[ -d $LD_LIBRARY && ! $LD_LIBRARY_PATH =~ $LD_LIBRARY ]]; then
+#     export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+# fi
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -133,7 +133,3 @@ alias tns="tmux new-session -s base"
 alias tks="tmux kill-session -t base"
 alias tas="tmux attach -t base"
 alias killbg="kill ${${(v)jobstates##*:*:}%=*}"
-alias vim="nvim"
-alias conda-python2="~/anaconda3/envs/py27/bin/python"
-alias conda-python3="~/anaconda3/bin/python3"
-alias conda="~/anaconda3/bin/conda"
