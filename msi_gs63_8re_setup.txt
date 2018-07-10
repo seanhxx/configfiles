@@ -44,3 +44,6 @@ modprobe bbswitch load_state=0
 apt-get install vdpau-va-driver mesa-utils
 
 apt-get install -t testing bumblebee-nvidia
+
+7. Install Wifi Driver
+https://ubuntuforums.org/showthread.php?t=2392640
