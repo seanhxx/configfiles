@@ -47,3 +47,42 @@ apt-get install -t testing bumblebee-nvidia
 
 7. Install Wifi Driver
 https://ubuntuforums.org/showthread.php?t=2392640
+
+8. Multiple monitors display
+basically follow this link: https://unix.stackexchange.com/questions/321151/do-not-manage-to-activate-hdmi-on-a-laptop-that-has-optimus-bumblebee
+a. modify /etc/bumblebee/xorg.conf.nvidia
+Section "ServerLayout"
+    Identifier  "Layout0"
+    
+    Screen 0 "nvidia"
+    Inactive "intel_gpu"
+    
+    Option      "AutoAddDevices" "true"
+    Option      "AutoAddGPU" "false"
+EndSection
+
+Section "Device"
+    Identifier  "DiscreteNvidia"
+    Driver      "nvidia"
+    VendorName  "NVIDIA Corporation"
+    Option "ProbeAllGpus" "false"
+    Option "NoLogo" "true"
+    Option "AllowEmptyInitialConfiguration" "true"
+EndSection
+
+Section "Screen"
+    Identifier "nvidia"
+    Device "DiscreteNVidia"
+EndSection
+
+b. create /usr/share/X11/xorg.conf.d/20-intel.conf
+Section "Device"
+    Identifier "intel_gpu"
+    Driver "intel"
+    Option "VirtualHeads" "2"
+EndSection
+
+Bug fixed:
+1. cannot login desktop: update xorg related packages 
+https://askubuntu.com/questions/453150/14-04-intel-hd-graphics-undefined-symbol-drm-intel-get-reset-stats
+2. chrome menu text strip line overlapping: disable hardware acceleration in chrome
