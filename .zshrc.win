@@ -94,3 +94,14 @@ alias tns="tmux new-session -s base"
 alias tks="tmux kill-session -t base"
 alias tas="tmux attach -t base"
 alias killbg="kill ${${(v)jobstates##*:*:}%=*}"
+
+alias gs="git status"
+alias ga="git add"
+alias gb="git branch"
+alias gc="git commit"
+alias gd="git diff"
+alias go="git checkout"
+alias gk="gitk --all&"
+alias gx="gitx --all"
+
+
