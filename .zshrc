@@ -129,10 +129,15 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# setopt no_nomatch
+
 alias tns="tmux new-session -s base"
 alias tks="tmux kill-session -t base"
 alias tas="tmux attach -t base"
 alias killbg="kill ${${(v)jobstates##*:*:}%=*}"
 alias pyvenv3-intel="source /opt/intel/intelpython3/bin/activate root"
-alias gpuon="sudo tee /proc/acpi/bbswitch <<< ON"
-alias gpuoff="sudo rmmod nvidia_uvm nvidia || true && sudo tee /proc/acpi/bbswitch <<< OFF"
+alias gpu-on="sudo tee /proc/acpi/bbswitch <<< ON"
+alias gpu-off="sudo rmmod ipmi_devintf nvidia_uvm nvidia_modeset nvidia ipmi_msghandler || true && sudo tee /proc/acpi/bbswitch <<< OFF"
+alias open-external-monitor="intel-virtual-output"
+alias close-external-monitor="intel-virtual-output && sudo rmmod ipmi_devintf nvidia_modeset nvidia ipmi_msghandler || true && sudo tee /proc/acpi/bbswitch <<< OFF"

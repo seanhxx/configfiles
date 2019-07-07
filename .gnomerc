@@ -2,3 +2,4 @@ Section "InputDevice"
   Driver "keyboard"
   Option "XkbRules" [...]
   Option "XkbOptions" "ctrl:swapcaps"
+EndSection
