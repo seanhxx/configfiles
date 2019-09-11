@@ -132,7 +132,7 @@ source $ZSH/oh-my-zsh.sh
 
 # setopt no_nomatch
 
-alias tns="tmux new-session -s base"
+alias tns="tmux -2 new-session -s base"
 alias tks="tmux kill-session -t base"
 alias tas="tmux attach -t base"
 alias killbg="kill ${${(v)jobstates##*:*:}%=*}"
