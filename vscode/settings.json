@@ -1,7 +1,8 @@
 {
     "vim.handleKeys": {
         "<C-e>": false,
-        "<C-n>": false
+        "<C-n>": false,
+        "<C-a>": false
     },
     "files.autoSave": "afterDelay"
 }
