@@ -2,7 +2,13 @@
     "vim.handleKeys": {
         "<C-e>": false,
         "<C-n>": false,
-        "<C-a>": false
+        "<C-a>": false,
+        "<C-y>": false,
     },
-    "files.autoSave": "afterDelay"
+    "files.autoSave": "afterDelay",
+    "explorer.confirmDelete": false,
+    "cmake.configureOnOpen": false,
+    "C_Cpp.default.cppStandard": "c++11",
+    "C_Cpp.default.cStandard": "c11",
+    "window.zoomLevel": 0
 }

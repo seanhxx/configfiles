@@ -1,4 +1,4 @@
-// Place your key bindings in this file to override the defaultsauto[]
+// Place your key bindings in this file to override the defaults
 [
     {
         "key": "alt+/",
@@ -7,11 +7,6 @@
     },
     {
         "key": "ctrl+/",
-        "command": "-editor.action.commentLine",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+;",
         "command": "-editor.action.commentLine",
         "when": "editorTextFocus && !editorReadonly"
     },
@@ -30,5 +25,68 @@
     {
         "key": "ctrl+pageup",
         "command": "-workbench.action.previousEditor"
-    }
+    },
+    {
+        "key": "ctrl+x ctrl+k",
+        "command": "-workbench.action.closeAllEditors",
+    },
+    {
+        "key": "ctrl+x ctrl+c",
+        "command": "workbench.action.closeAllEditors",
+    },
+    {
+        "key": "ctrl+x ctrl+l",
+        "command": "-editor.action.transformToLowercase",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+x ctrl+h",
+        "command": "workbench.action.focusLeftGroup",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+x ctrl+l",
+        "command": "workbench.action.focusRightGroup",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+x ctrl+k",
+        "command": "workbench.action.focusAboveGroup",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+x ctrl+j",
+        "command": "workbench.action.focusBelowGroup",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+alt+h",
+        "command": "workbench.action.moveEditorToLeftGroup",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+alt+l",
+        "command": "workbench.action.moveEditorToRightGroup",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+alt+k",
+        "command": "workbench.action.moveEditorToAboveGroup",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+alt+j",
+        "command": "workbench.action.moveEditorToBelowGroup",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+x -",
+        "command": "workbench.action.splitEditorDown",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+x \\",
+        "command": "workbench.action.splitEditor",
+        "when": "editorTextFocus && !editorReadonly"
+    },
 ]
