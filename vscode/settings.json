@@ -13,6 +13,11 @@
     "C_Cpp.default.cStandard": "c11",
     "window.zoomLevel": 1,
 
+    // Latex Configuration
+    "latex-workshop.showContextMenu": true,
+    "latex-workshop.intellisense.package.enabled": true,
+    "latex-workshop.latex.autoBuild.run": "never",
+
     "latex-workshop.latex.tools": [
         {
             // 编译工具和命令
@@ -63,9 +68,33 @@
         }
     ],
 
-    "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk",
+        "*.snm",
+        "*.synctex(busy)",
+        "*.synctex.gz(busy)",
+        "*.nav"
+    ],
     
     "latex-workshop.view.pdf.viewer": "external",
+    "latex-workshop.view.pdf.ref.viewer": "external",
 
     "latex-workshop.view.pdf.external.viewer.command": "C:\\Program Files\\SumatraPDF\\SumatraPDF.exe",
     "latex-workshop.view.pdf.external.viewer.args": [
@@ -75,9 +104,12 @@
     "latex-workshop.view.pdf.external.synctex.command": "C:\\Program Files\\SumatraPDF\\SumatraPDF.exe",
     "latex-workshop.view.pdf.external.synctex.args": [
         "-forward-search",
+        "%TEX%",
         "%LINE%",
+        "-reuse-instance",
+        "-inverse-search",
+        "\"C:/Users/seanh/AppData/Local/Programs/Microsoft VS Code/Code.exe\" \"C:/Users/seanh/AppData/Local/Programs/Microsoft VS Code/resources/app/out/cli.js\" -r -g \"%f\":\"%l\"",
         "%PDF%",
-        "%TEX%"
     ],
 
 }
