@@ -27,7 +27,6 @@
                 "-synctex=1",
                 "-interaction=nonstopmode",
                 "-file-line-error",
-                "-pdf",
                 "%DOCFILE%"
             ]
         },
@@ -47,6 +46,13 @@
             "args": [
                 "%DOCFILE%"
             ]
+        },
+        {
+            "name": "biber",
+            "command": "biber",
+            "args": [
+                "%DOCFILE%"
+            ]
         }
     ],
 
@@ -62,6 +68,15 @@
             "tools": [
                 "xelatex",
                 "bibtex",
+                "xelatex",
+                "xelatex"
+            ]
+        },
+        {
+            "name": "xe->biber->xe->xe",
+            "tools": [
+                "xelatex",
+                "biber",
                 "xelatex",
                 "xelatex"
             ]
