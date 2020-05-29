@@ -12,6 +12,7 @@
     "C_Cpp.default.cppStandard": "c++11",
     "C_Cpp.default.cStandard": "c11",
     "window.zoomLevel": 1,
+    "terminal.integrated.inheritEnv": false,
 
     // Latex Configuration
     "latex-workshop.showContextMenu": true,
